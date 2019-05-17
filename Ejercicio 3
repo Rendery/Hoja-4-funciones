@@ -1,0 +1,22 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int thanos(int diametro, int extra)
+{
+	double costo;
+	costo = diametro * 1.5 + extra * 2.5;
+	return costo;
+}
+int main()
+{
+	int diametro,extra;
+	
+	cout << "Ingrese el diametro de la pizza: "; cin >> diametro;
+	cout << "Ingrese los ingredientes extra: "; cin >> extra;
+
+	cout << "El precio total es de: " << thanos(diametro, extra);
+
+	_getch();
+}
