@@ -1,0 +1,24 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+void thanos(int *dia, int *ex)
+{
+	*dia = *dia * 1.5 + *ex * 2.5;
+}
+int main()
+{
+	double diametro, extra;
+	int *dia, *ex;
+
+	dia = &diametro;
+	ex = &extra;
+
+	cout << "Ingrese el diametro de la pizza: "; cin >> diametro;
+	cout << "Ingrese los ingredientes extra: "; cin >> extra;
+	thanos(dia, ex);
+	cout << "El precio total es de: " << diametro;
+
+	_getch();
+}
