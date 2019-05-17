@@ -1,0 +1,22 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int thanos(int horas)
+{
+	double costo;
+	if ((horas >= 0) && (horas <= 40)) { costo = 16 * horas; }
+	if ((horas > 40)) { costo = (16*40) + 20*(horas-40); }
+	return costo;
+}
+int main()
+{
+	int horas;
+	
+	cout << "Ingrese la cantidad de horas trabajadas: "; cin >> horas;
+
+	cout << "El salario total es de: " << thanos(horas) << " soles";
+
+	_getch();
+}
