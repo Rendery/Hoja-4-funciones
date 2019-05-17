@@ -9,7 +9,7 @@ void thanos(int *dia, int *ex)
 }
 int main()
 {
-	double diametro, extra;
+	int diametro, extra;
 	int *dia, *ex;
 
 	dia = &diametro;
