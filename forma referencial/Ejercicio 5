@@ -1,0 +1,26 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+double thanos(double *can, double *pre)
+{
+	*pre = (*can * *pre)*(118 / 100.00);
+	return 0;
+}
+int main()
+{
+	double canti, precio;
+	double *can, *pre;
+
+	can = &canti;
+	pre = &precio;
+
+	cout << "Ingrese la cantidad de unidades adquiridas: "; cin >> canti;
+	cout << "Precio del articulo: "; cin >> precio;
+
+	thanos(can, pre);
+
+	cout << "Monto total a pagar: " << precio << " soles (contado IGV)";
+	_getch();
+}
