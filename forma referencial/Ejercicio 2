@@ -1,0 +1,42 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+void thanos(int *ed, int *sex)
+{
+	int costo;
+	char setso;
+	setso = char(*sex);
+
+	setso = toupper(setso);
+
+	if ((setso = 'M') && (*ed < 25)) { costo = 1000; }
+	if ((setso = 'M') && (*ed >= 25)) { costo = 700; }
+	if ((setso = 'F') && (*ed < 21)) { costo = 800; }
+	if ((setso = 'F') && (*ed >= 21)) { costo = 500; }
+
+	*sex = costo;
+
+}
+int main()
+{
+	int edad, sexo;
+	int *ed, *sex;
+	char setso;
+
+	cout << "Ingrese la edad: "; cin >> edad;
+	cout << endl;
+	cout << "Ingrese el sexo [M]masculino o [F]femenino: "; cin >> setso;
+	cout << endl;
+
+	sexo = int(setso);
+	ed = &edad;
+	sex = &sexo;
+
+	thanos(ed, sex);
+
+	cout << "Usted pagara un total de: " << sexo;
+
+	_getch();
+}
