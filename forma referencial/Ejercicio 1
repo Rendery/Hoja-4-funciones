@@ -1,0 +1,26 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+void costo(int *num)
+{
+	int costo;
+	if ((0 <= *num) && (*num <= 3)) { costo = 145; }
+	if ((4 <= *num) && (*num <= 5)) { costo = 138; }
+	if (6 <= *num) { costo = 135; }
+	*num = costo * *num;
+}
+int main()
+{
+	int numero;
+	int *num;
+	num = &numero;
+
+	cout << "Numero de neumaticos a comprar: " << endl;
+	cin >> numero;
+	costo(num);
+	cout << "El precio por los neumaticos es de: " << numero;
+
+	_getch();
+}
